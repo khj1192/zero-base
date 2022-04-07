@@ -85,7 +85,18 @@ console.log("result4 : "+typeof result4, result4); // string
 // 비교시 엄격비교연산자로 작성하자.
 // 타입도 최대한 명시적으로 사용하는것이 좋다.
 
+const time = 10;
+let message3;
 
+if(time < 12){
+    message3 = '오전이다!!';
+} else if(time > 12){
+    message3 = '오후!!';
+} else{
+    message3 = '여긴 올수없어!';
+}
+
+console.log(message3);
 
 
 
