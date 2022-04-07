@@ -1,6 +1,5 @@
 // 주석은 사람을 위한 코드.
 /*MDN사이트와 친해지자 */
-
 let count = 0;
 
 count = count + 1;

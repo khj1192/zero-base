@@ -57,15 +57,15 @@ arr.unshift('첫번째'); // push, unshift 메소드라함.
     var varVal = '함수-단위'
     const constVal = '블럭-단위'
 
-    var globalV = '전연변수'
+    var globalV = '전역변수'
     
     function outfunc(){
         
         console.log("내부에서 외부 호출 : "+globalV);
-        // console.log("infunc밖에서 infunc 변수 호출 : "+ inV); // 에러
+         // console.log("infunc밖에서 infunc 변수 호출 : "+ inV); // 에러
 
         function infunc(){
-            var inV = '내부변수';
+            const inV = '내부변수';
             console.log("내부에서 외부 호출(infunc) : "+globalV);
         }
         
@@ -74,6 +74,34 @@ arr.unshift('첫번째'); // push, unshift 메소드라함.
         return ;
     }
     outfunc();
+
+
+    function printMessage1() { 
+        var message1 = "hello"; 
+        
+        if (true) { 
+            var message1 = "world!"; 
+            console.log(message1); 
+                    // world! 
+        } 
+        console.log(message1); 
+                    // world! 
+    }
+     printMessage1();
+///////////////////////////////////////////////////////
+
+     function printMessage2() { 
+        let message2 = "hello"; 
+        
+        if (true) { 
+            let message2 = "world!"; 
+            console.log(message2); 
+                    // world! 
+        } 
+        console.log(message2); 
+                    // hello 
+    }
+     printMessage2();
 
 
 
